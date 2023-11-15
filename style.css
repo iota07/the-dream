@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.worldmap{
+    background-image: url("./src/7510.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:90vh;
+    width: 90vw;
+    border-radius: 120px;
+    box-shadow: 5px 5px 5px;
+    
+
+}
+
+.appli{
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.7));
+    height: 20vh;
+    box-shadow: 10px 8px 8px;
+    
+        
+}
