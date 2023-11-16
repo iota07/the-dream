@@ -1,6 +1,10 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 <?php
 $resultMessage = ""; // Initialize a variable to store the result message
 
@@ -46,11 +50,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 // Set the result message
                 $resultMessage = "$amount $from_currency is equal to $converted_amount $to_currency";
             } else {
-                $resultMessage = "Error in API response";
+                $resultMessage = "Error - The entered amount is incorrect";
             }
         }
     } else {
-        $resultMessage = "Please fill in all the fields in the form.";
+        $resultMessage = "Enter an amount to convert";
     }
 }
 ?>
@@ -62,12 +66,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <title>Currency Exchange</title>
 </head>
 <body class="d-flex align-items-center justify-content-center">
+    
 
-    <div class="container col-sm-11 col-md-8 worldmap ">
-        <div class="card appli col-sm-8 col-md-6 align-items-center justify-content-center offset-3">
+    <div class="container-fluid col-sm-12 col-md-12 col-lg-10 d-flex flex-column  align-items-center justify-content-center">
+        <img class="worldmap" src="/src/7605.jpg">
+        <div class="card appli col-sm-8 col-md-6 align-items-center justify-content-center p-5">
             <h1>Currency Exchange</h1>
 
-            <form action="convert.php" method="GET">
+            <form class="fluid" action="convert.php" method="GET">
                 <label for="from">From:</label>
                 <select id="from" name="from" required>
                     
@@ -76,6 +82,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <option value="JPY">JPY</option>
                     <option value="GBP">GBP</option>
                     <option value="CNY">CNY</option>
+                    <option value="CAD">CAD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="CHF">CHF</option>                    
                         
                 </select>
 
@@ -87,6 +96,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <option value="JPY">JPY</option>
                     <option value="GBP">GBP</option>
                     <option value="CNY">CNY</option>
+                    <option value="CAD">CAD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="CHF">CHF</option>
                     
                 </select>
 
@@ -99,7 +111,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             <!-- Display the result message after the form -->
             <?php echo $resultMessage; ?>
         </div>
-    </div>
+    </div>  
+     
 
 </body>
 </html>

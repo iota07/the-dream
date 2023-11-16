@@ -2,24 +2,34 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-image:url("./src/4882066.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+
     
 }
 .worldmap{
-    background-image: url("./src/7510.jpg");
-    background-size:cover;
-    background-repeat:no-repeat;
-    height:90vh;
-    width: 90vw;
-    border-radius: 120px;
-    box-shadow: 5px 5px 5px;
+    height:150vh;
+    width: auto;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px;  
+    position: relative;
+    z-index: -1;
+    transform: translateY(-25%);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
     
-
 }
 
 .appli{
     background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.7));
-    height: 20vh;
     box-shadow: 10px 8px 8px;
-    
+    z-index: 1;
+    position: absolute;    
         
 }

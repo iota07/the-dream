@@ -15,4 +15,4 @@ Allow the user to choose between different currencies
 Provide a button to switch the from / to valuta types (So Euro -> Dollar becomes Dollar --> Euro)
 
 ### sources: 
-<a href="https://www.freepik.com/free-vector/modern-world-map-background_1098128.htm#query=transparent%20world%20map&position=0&from_view=search&track=ais&uuid=145eeffa-41ed-4ea0-9cfa-ca2087534c8f">Image by Harryarts</a> on Freepik
+<a href="https://www.freepik.com/free-vector/modern-world-map-background_1102658.htm#query=transparant%20world%20map&position=39&from_view=search&track=ais&uuid=4b38c991-c0f1-4096-b175-38316b3f158a">Image by Harryarts</a> on Freepik
