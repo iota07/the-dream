@@ -5,7 +5,7 @@ body{
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto Mono', monospace;
-    background-image:url("./src/4882066.jpg");
+    background-image:url("./src/17266.jpg");
     background-size:cover;
     background-repeat:no-repeat;
 
@@ -15,7 +15,6 @@ body{
     height:150vh;
     width: auto;
     border-radius: 50px;
-    box-shadow: 5px 5px 5px;  
     position: relative;
     z-index: -1;
     transform: translateY(-25%);
@@ -29,7 +28,7 @@ body{
 .appli{
     background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.7));
     box-shadow: 10px 8px 8px;
-    z-index: 1;
-    position: absolute;    
+    position: absolute;   
+    border-radius: 10px; 
         
 }

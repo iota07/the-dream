@@ -3,6 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <link rel="stylesheet" href="style.css">
 
 <?php
@@ -68,44 +69,55 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <body class="d-flex align-items-center justify-content-center">
     
 
-    <div class="container-fluid col-sm-12 col-md-12 col-lg-10 d-flex flex-column  align-items-center justify-content-center">
+    <div class="container col-sm-12 col-md-12 col-lg-12 d-flex flex-column  align-items-center justify-content-center">
         <img class="worldmap" src="/src/7605.jpg">
-        <div class="card appli col-sm-8 col-md-6 align-items-center justify-content-center p-5">
-            <h1>Currency Exchange</h1>
+        
+        <div class="card appli col-sm-12 col-md-8 align-items-center justify-content-center p-5">
+            <h1>Live Currency Exchange</h1>
 
-            <form class="fluid" action="convert.php" method="GET">
+            <form action="convert.php" method="GET">
+                <div class="form-group">
                 <label for="from">From:</label>
                 <select id="from" name="from" required>
                     
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="JPY">JPY</option>
-                    <option value="GBP">GBP</option>
-                    <option value="CNY">CNY</option>
-                    <option value="CAD">CAD</option>
-                    <option value="AUD">AUD</option>
-                    <option value="CHF">CHF</option>                    
+                <?php
+                    $fromCurrencyOptions = ["USD", "EUR", "JPY", "GBP", "CNY", "CAD", "AUD", "CHF"];
+                    foreach ($fromCurrencyOptions as $option) {
+                        echo "<option value=\"$option\"";
+                        if ($option === $from_currency) {
+                            echo " selected"; // Cette ligne ajoute l'attribut selected si l'option correspond à $from_currency
+                        }
+                        echo ">$option</option>";
+                    }
+                ?>                    
                         
                 </select>
+                
+                <button type="button" onclick="invertSelection()"><span class="material-symbols-outlined">sync_alt</span></button>
 
                 <label for="to">To:</label>
                 <select id="to" name="to" required>
                     
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="JPY">JPY</option>
-                    <option value="GBP">GBP</option>
-                    <option value="CNY">CNY</option>
-                    <option value="CAD">CAD</option>
-                    <option value="AUD">AUD</option>
-                    <option value="CHF">CHF</option>
+                <?php
+                    $toCurrencyOptions = ["USD", "EUR", "JPY", "GBP", "CNY", "CAD", "AUD", "CHF"];
+                    foreach ($toCurrencyOptions as $option) {
+                        echo "<option value=\"$option\"";
+                        if ($option === $to_currency) {
+                            echo " selected"; // Cette ligne ajoute l'attribut selected si l'option correspond à $to_currency
+                        }
+                        echo ">$option</option>";
+                    }
+                ?>
                     
                 </select>
-
+                
                 <label for="amount">Amount:</label>
                 <input type="number" id="amount" name="amount" required>
 
                 <button type="submit">Convert</button>
+                </div>
+                
+                
             </form>
 
             <!-- Display the result message after the form -->
@@ -113,8 +125,16 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         </div>
     </div>  
      
+    <script>
+        function invertSelection() {
+            var fromCurrency = document.getElementById('from').value;
+            var toCurrency = document.getElementById('to').value;
+
+            document.getElementById('from').value = toCurrency;
+            document.getElementById('to').value = fromCurrency;
+        }
+    </script>
 
 </body>
 </html>
 
-<style>
