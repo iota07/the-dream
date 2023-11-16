@@ -16,3 +16,5 @@ Provide a button to switch the from / to valuta types (So Euro -> Dollar becomes
 
 ### sources: 
 <a href="https://www.freepik.com/free-vector/modern-world-map-background_1102658.htm#query=transparant%20world%20map&position=39&from_view=search&track=ais&uuid=4b38c991-c0f1-4096-b175-38316b3f158a">Image by Harryarts</a> on Freepik
+
+<a href="https://www.freepik.com/free-vector/blue-technology-circuit-diagram-with-glowing-line-lights_3922435.htm#query=electronic%20background&position=15&from_view=search&track=ais&uuid=250e87df-bafe-4665-8902-51757cf315a0">Image by starline</a> on Freepik
