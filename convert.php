@@ -66,55 +66,55 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Exchange</title>
 </head>
-<body class="d-flex align-items-center justify-content-center">
+<body class="d-flex align-items-center justify-content-center overflow-auto">
     
 
-    <div class="container col-sm-12 col-md-12 col-lg-12 d-flex flex-column  align-items-center justify-content-center">
-        <img class="worldmap" src="./src/7605.jpg">
+    <div class="container col-sm-12 col-md-12 col-lg-12 d-flex flex-column  align-items-center justify-content-center overflow-auto">
+        <img class="img worldmap overflow-hidden" src="./src/7605.jpg">
         
-        <div class="card appli col-sm-12 col-md-8 align-items-center justify-content-center p-5">
+        <div class="card col-sm-12 col-md-8 col-lg-8 appli align-items-center justify-content-center m-1">
             <h1>Live Currency Exchange</h1>
 
             <form action="convert.php" method="GET">
-                <div class="form-group">
-                <label for="from">From:</label>
-                <select id="from" name="from" required>
-                    
-                <?php
-                    $fromCurrencyOptions = ["USD", "EUR", "JPY", "GBP", "CNY", "CAD", "AUD", "CHF"];
-                    foreach ($fromCurrencyOptions as $option) {
-                        echo "<option value=\"$option\"";
-                        if ($option === $from_currency) {
-                            echo " selected"; // Cette ligne ajoute l'attribut selected si l'option correspond à $from_currency
-                        }
-                        echo ">$option</option>";
-                    }
-                ?>                    
+                <div class="form-group m-2">
+                    <label for="from">From:</label>
+                    <select class="custom-select mb-2" id="from" name="from" required>
                         
-                </select>
-                
-                <button type="button" onclick="invertSelection()"><span class="material-symbols-outlined">sync_alt</span></button>
-
-                <label for="to">To:</label>
-                <select id="to" name="to" required>
-                    
-                <?php
-                    $toCurrencyOptions = ["USD", "EUR", "JPY", "GBP", "CNY", "CAD", "AUD", "CHF"];
-                    foreach ($toCurrencyOptions as $option) {
-                        echo "<option value=\"$option\"";
-                        if ($option === $to_currency) {
-                            echo " selected"; // Cette ligne ajoute l'attribut selected si l'option correspond à $to_currency
+                    <?php
+                        $fromCurrencyOptions = ["USD", "EUR", "JPY", "GBP", "CNY", "CAD", "AUD", "CHF"];
+                        foreach ($fromCurrencyOptions as $option) {
+                            echo "<option value=\"$option\"";
+                            if ($option === $from_currency) {
+                                echo " selected"; // Cette ligne ajoute l'attribut selected si l'option correspond à $from_currency
+                            }
+                            echo ">$option</option>";
                         }
-                        echo ">$option</option>";
-                    }
-                ?>
+                    ?>                    
+                            
+                    </select>
                     
-                </select>
-                
-                <label for="amount">Amount:</label>
-                <input type="number" id="amount" name="amount" required>
+                    <button class="btn btn-outline-secondary" type="button" onclick="invertSelection()"><span class="material-symbols-outlined">sync_alt</span></button>
 
-                <button type="submit">Convert</button>
+                    <label for="to">To:</label>
+                    <select class="custom-select mb-2" id="to" name="to" required>
+                        
+                    <?php
+                        $toCurrencyOptions = ["USD", "EUR", "JPY", "GBP", "CNY", "CAD", "AUD", "CHF"];
+                        foreach ($toCurrencyOptions as $option) {
+                            echo "<option value=\"$option\"";
+                            if ($option === $to_currency) {
+                                echo " selected"; // Cette ligne ajoute l'attribut selected si l'option correspond à $to_currency
+                            }
+                            echo ">$option</option>";
+                        }
+                    ?>
+                        
+                    </select>
+                    
+                    <label for="amount">Amount:</label>
+                    <input class="input-group form-control mt-1 mb-2" type="text" id="amount" name="amount" required>
+
+                    <button class="btn btn-outline-secondary" type="submit">Convert</button>
                 </div>
                 
                 

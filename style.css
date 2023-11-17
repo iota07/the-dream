@@ -1,23 +1,39 @@
+@media only screen and (max-width: 1024px) {
+    img{
+        transform: translateY(-25%);
+        height:120vh;
+
+
+    }
+  }
+
+@media only screen and (min-width: 1025px) {
+    img{
+        transform: translateY(-25%);
+        height:120vh;
+        
+    }
+}
+
+  
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto Mono', monospace;
     background-image:url("./src/17266.jpg");
     background-size:cover;
     background-repeat:no-repeat;
 
+
     
 }
+
 .worldmap{
-    height:150vh;
+    height:140vh;
     width: auto;
     border-radius: 50px;
     position: relative;
     z-index: -1;
-    transform: translateY(-25%);
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top-right-radius: 50%;
@@ -29,6 +45,5 @@ body{
     background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.7));
     box-shadow: 10px 8px 8px;
     position: absolute;   
-    border-radius: 10px; 
-        
+    border-radius: 10px;               
 }
