@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     
 
     <div class="container col-sm-12 col-md-12 col-lg-12 d-flex flex-column  align-items-center justify-content-center">
-        <img class="worldmap" src="/src/7605.jpg">
+        <img class="worldmap" src="./src/7605.jpg">
         
         <div class="card appli col-sm-12 col-md-8 align-items-center justify-content-center p-5">
             <h1>Live Currency Exchange</h1>
