@@ -69,8 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <body class="d-flex align-items-center justify-content-center overflow-auto">
     
 
-    <div class="container col-sm-12 col-md-12 col-lg-12 d-flex flex-column  align-items-center justify-content-center overflow-auto">
-        <img class="img worldmap overflow-visible" src="./src/7605.jpg">
+    <div class="container col-sm-12 col-md-12 col-lg-12 d-flex flex-column  align-items-center justify-content-center">
+        <img class="img worldmap overflow-auto" src="./src/7605.jpg">
         
         <div class="card col-sm-12 col-md-8 col-lg-8 appli align-items-center justify-content-center m-1">
             <h1>Live Currency Exchange</h1>
