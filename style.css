@@ -1,16 +1,33 @@
-@media only screen and (max-width: 1024px) {
-    img{
-        transform: translateY(-25%);
-        height:120vh;
+@media only screen and (max-width: 576px) {
+    .worldmap{
+        transform: translateY(-50%);
+        height:55vh;
 
 
     }
   }
 
-@media only screen and (min-width: 1025px) {
-    img{
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .worldmap{
+        transform: translateY(-40%);
+        height:65vh;
+        
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    .worldmap{
+        transform: translateY(-30%);
+        height:70vh;
+        
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .worldmap{
         transform: translateY(-25%);
-        height:120vh;
+        height:140vh;
         
     }
 }
@@ -29,8 +46,7 @@ body{
 }
 
 .worldmap{
-    height:140vh;
-    width: auto;
+      
     border-radius: 50px;
     position: relative;
     z-index: -1;
